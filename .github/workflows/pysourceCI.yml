@@ -1,0 +1,14 @@
+name: pysourceCI
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check python installation
+        run: bash src.sh -v 3.11.4 -d /usr/src
