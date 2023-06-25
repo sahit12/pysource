@@ -47,7 +47,7 @@ sudo tar -xzf "Python-$PYTHON_VERSION.tgz"
 cd Python-$PYTHON_VERSION
 sudo ./configure --enable-optimizations
 sudo make altinstall
-python$PYTHON_VERSION
+python$CHECK_VERSION -V
 if [[ $? -ne 0 ]]; then
     echo "Some error occurred while installing python version - $PYTHON_VERSION"
 else
