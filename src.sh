@@ -35,8 +35,11 @@ echo "Python version: $PYTHON_VERSION";
 echo "Directory Path: $DIRECTORY_PATH";
 repeat; echo; echo
 
-sudo apt-get install build-essential checkinstall
-sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+# sudo apt-get install build-essential checkinstall
+# sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+sudo apt-get update
+sudo apt-get install gdebi-core
+
 cd $DIRECTORY_PATH
 CHECK_VERSION="$(echo $PYTHON_VERSION | cut -d'.' -f1-2)"
 sudo wget "https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tgz"
