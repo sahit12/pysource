@@ -51,5 +51,5 @@ python$CHECK_VERSION -V
 if [[ $? -ne 0 ]]; then
     echo "Some error occurred while installing python version - $PYTHON_VERSION"
 else
-    echo "Successfully installed python version $PYTHON_VERSION at $(which python$PYTHON_VERSION)"
+    echo "Successfully installed python version $PYTHON_VERSION at '$(which python$CHECK_VERSION)'"
 fi
